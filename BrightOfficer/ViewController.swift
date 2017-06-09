@@ -52,12 +52,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         mapView.removeAnnotations(mapView.annotations)
     }
     
-    func addAnnotationToMapKit(name: String, coords: CLLocationCoordinate2D) {        
+    func addAnnotationToMapKit(name: String, coords: CLLocationCoordinate2D) {
         let annotation = MKPointAnnotation()
         annotation.coordinate = coords
         annotation.title = name
         mapView.addAnnotation(annotation)
-        let region = MKCoordinateRegionMakeWithDistance(coord, 800, 800)
+        let region = MKCoordinateRegionMakeWithDistance(coords, 800, 800)
         mapView.setRegion(region, animated: true)
     }
 
