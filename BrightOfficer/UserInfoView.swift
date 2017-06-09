@@ -27,8 +27,7 @@ class UserInfoView: UIView {
         super.init(coder: aDecoder)
         UINib(nibName: "UserInfo", bundle: nil).instantiate(withOwner: self, options: nil)
         addSubview(view)
-        view.frame = self.bounds
-        imageView.layer.cornerRadius = 60
+        view.frame = self.bounds        
     }
     
     func apply(user: User) {
