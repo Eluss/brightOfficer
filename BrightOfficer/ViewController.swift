@@ -20,7 +20,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bright Officer"        
+        title = "Bright Officer"
+        
         usersFetcher.fetchUsers { users in
             self.users = users
             self.tableView.reloadData()
@@ -32,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.phoneNumber
+        cell.selectionStyle = .gray
         return cell
     }
     
