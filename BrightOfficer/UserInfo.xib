@@ -126,8 +126,8 @@
                         <constraint firstAttribute="width" constant="340" id="6Un-Wg-0Dh"/>
                     </constraints>
                 </stackView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-hv-Dq7">
-                    <rect key="frame" x="385" y="20" width="124" height="122"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-hv-Dq7">
+                    <rect key="frame" x="389" y="20" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="WIJ-y2-UOh"/>
                         <constraint firstAttribute="width" constant="120" id="e3z-9c-aVf"/>
@@ -136,8 +136,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="K7I-hv-Dq7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="3Tv-bS-BPx"/>
                 <constraint firstItem="iMQ-eC-R9e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4ng-pM-6ya"/>
                 <constraint firstItem="iMQ-eC-R9e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6X2-bW-JaB"/>
+                <constraint firstAttribute="trailing" secondItem="K7I-hv-Dq7" secondAttribute="trailing" constant="161" id="9og-dJ-F03"/>
                 <constraint firstAttribute="bottom" secondItem="iMQ-eC-R9e" secondAttribute="bottom" id="hxf-wq-mmZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
