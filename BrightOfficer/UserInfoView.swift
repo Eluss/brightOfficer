@@ -18,6 +18,7 @@ class UserInfoView: UIView {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     private var userActionPerformer = UserActionPerformer()
     var user: User?
@@ -27,6 +28,7 @@ class UserInfoView: UIView {
         UINib(nibName: "UserInfo", bundle: nil).instantiate(withOwner: self, options: nil)
         addSubview(view)
         view.frame = self.bounds
+        imageView.layer.cornerRadius = 60
     }
     
     func apply(user: User) {
@@ -36,6 +38,11 @@ class UserInfoView: UIView {
         weightLabel.text = "\(user.weight)kg"
         infoLabel.text = user.info
         statusLabel.text = user.status
+        let url = URL(string: user.picture)!
+        if let data = try? Data(contentsOf: url) {
+            imageView.image = UIImage(data: data)
+        }
+        
     }
     @IBAction func didTapActionButton(_ sender: Any) {
         if let user = user {

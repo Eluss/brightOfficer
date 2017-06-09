@@ -14,7 +14,7 @@ class User: Mappable {
     
     var id: String = ""
     var name: String = ""
-    var picture: String?
+    var picture: String = ""
     var location: CLLocationCoordinate2D?
     var phoneNumber: String = ""
     var weight: Double = 0.0
