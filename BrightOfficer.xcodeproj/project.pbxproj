@@ -17,6 +17,7 @@
 		72662D8C1EEAF1D500827BA1 /* UserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72662D8B1EEAF1D500827BA1 /* UserInfo.xib */; };
 		72662D8E1EEAF2DF00827BA1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */; };
 		72662D901EEAFBAC00827BA1 /* UsersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */; };
+		72662D921EEB0B0600827BA1 /* UserActionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		72662D8B1EEAF1D500827BA1 /* UserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfo.xib; sourceTree = "<group>"; };
 		72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFetcher.swift; sourceTree = "<group>"; };
+		72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActionPerformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				72662D6A1EEADAD200827BA1 /* AppDelegate.swift */,
 				72662D6C1EEADAD200827BA1 /* ViewController.swift */,
+				72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */,
 				72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */,
 				72662D891EEAF10200827BA1 /* User.swift */,
 				72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */,
@@ -166,6 +169,7 @@
 				72662D6B1EEADAD200827BA1 /* AppDelegate.swift in Sources */,
 				72662D8A1EEAF10200827BA1 /* User.swift in Sources */,
 				72662D8E1EEAF2DF00827BA1 /* UserInfoView.swift in Sources */,
+				72662D921EEB0B0600827BA1 /* UserActionPerformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

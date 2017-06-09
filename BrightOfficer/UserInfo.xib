@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoView" customModule="BrightOfficer" customModuleProvider="target">
             <connections>
+                <outlet property="didTapActionButton" destination="YyU-Gm-dq0" id="ymc-3d-e2s"/>
                 <outlet property="infoLabel" destination="yLg-GV-enJ" id="Np1-qH-Zdf"/>
                 <outlet property="nameLabel" destination="mql-Js-2H3" id="qO7-nz-VDb"/>
                 <outlet property="phoneLabel" destination="V2J-PW-4CC" id="AGY-eJ-on1"/>
@@ -28,6 +29,9 @@
                     <rect key="frame" x="549" y="20" width="101" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Odbierz osobę"/>
+                    <connections>
+                        <action selector="didTapActionButton:" destination="-1" eventType="touchUpInside" id="XKX-Ll-ZpE"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iMQ-eC-R9e">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="300"/>

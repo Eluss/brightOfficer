@@ -21,10 +21,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Bright Officer"
+        
         usersFetcher.fetchUsers { users in
             self.users = users
             self.tableView.reloadData()
-            
         }
     }
     
@@ -60,9 +60,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let region = MKCoordinateRegionMakeWithDistance(coords, 2000, 2000)
         mapView.setRegion(region, animated: true)
     }
-
-
-    
     
 }
 

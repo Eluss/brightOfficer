@@ -12,12 +12,15 @@ import UIKit
 class UserInfoView: UIView {
     
     @IBOutlet var view: UserInfoView!
+    private var userActionPerformer = UserActionPerformer()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
+    var user: User?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,11 +30,17 @@ class UserInfoView: UIView {
     }
     
     func apply(user: User) {
+        self.user = user
         nameLabel.text = user.name
         phoneLabel.text = user.phoneNumber
         weightLabel.text = "\(user.weight)kg"
         infoLabel.text = user.info
         statusLabel.text = "Waiting"
+    }
+    @IBAction func didTapActionButton(_ sender: Any) {
+        if let user = user {
+            userActionPerformer.changeStatusFor(user: user)
+        }
     }
     
 }
