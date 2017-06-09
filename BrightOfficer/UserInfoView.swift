@@ -26,4 +26,12 @@ class UserInfoView: UIView {
         view.frame = self.bounds
     }
     
+    func apply(user: User) {
+        nameLabel.text = user.name
+        phoneLabel.text = user.phoneNumber
+        weightLabel.text = "\(user.weight)kg"
+        infoLabel.text = user.info
+        statusLabel.text = "Waiting"
+    }
+    
 }

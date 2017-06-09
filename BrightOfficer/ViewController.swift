@@ -10,29 +10,37 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var users: [User] = [User]()
+    var usersFetcher = UsersFetcher()
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userInfoView: UserInfoView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bright Officer"        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        title = "Bright Officer"
+        usersFetcher.fetchUsers { users in
+            self.users = users
+            self.tableView.reloadData()
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = "John Cruger"
-        cell.detailTextLabel?.text = "Details"
+        let user = users[indexPath.row]
+        cell.textLabel?.text = user.name
+        cell.detailTextLabel?.text = user.phoneNumber
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Did select")
+        let user = users[indexPath.row]
+        userInfoView.apply(user: user)
     }
 
 

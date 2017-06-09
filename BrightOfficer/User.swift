@@ -18,4 +18,13 @@ class User {
     var weight: Double = 0.0
     var info: String = ""
     
+    init(name: String, picture: String, location: CLLocationCoordinate2D, phoneNumber: String, weight: Double, info: String) {
+        self.name = name
+        self.picture = picture
+        self.location = location
+        self.phoneNumber = phoneNumber
+        self.weight = weight
+        self.info = info
+    }
+    
 }
