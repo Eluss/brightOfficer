@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoView" customModule="BrightOfficer" customModuleProvider="target">
             <connections>
-                <outlet property="didTapActionButton" destination="YyU-Gm-dq0" id="ymc-3d-e2s"/>
                 <outlet property="infoLabel" destination="yLg-GV-enJ" id="Np1-qH-Zdf"/>
                 <outlet property="nameLabel" destination="mql-Js-2H3" id="qO7-nz-VDb"/>
                 <outlet property="phoneLabel" destination="V2J-PW-4CC" id="AGY-eJ-on1"/>

@@ -12,7 +12,6 @@ import UIKit
 class UserInfoView: UIView {
     
     @IBOutlet var view: UserInfoView!
-    private var userActionPerformer = UserActionPerformer()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -20,6 +19,7 @@ class UserInfoView: UIView {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
+    private var userActionPerformer = UserActionPerformer()
     var user: User?
     
     required init?(coder aDecoder: NSCoder) {
