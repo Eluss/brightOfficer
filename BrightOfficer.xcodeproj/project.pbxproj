@@ -14,6 +14,8 @@
 		72662D751EEADAD300827BA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72662D731EEADAD300827BA1 /* LaunchScreen.storyboard */; };
 		72662D861EEAECDD00827BA1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72662D851EEAECDD00827BA1 /* MapKit.framework */; };
 		72662D8A1EEAF10200827BA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D891EEAF10200827BA1 /* User.swift */; };
+		72662D8C1EEAF1D500827BA1 /* UserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72662D8B1EEAF1D500827BA1 /* UserInfo.xib */; };
+		72662D8E1EEAF2DF00827BA1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		72662D761EEADAD300827BA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72662D851EEAECDD00827BA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		72662D891EEAF10200827BA1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72662D8B1EEAF1D500827BA1 /* UserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfo.xib; sourceTree = "<group>"; };
+		72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				72662D6A1EEADAD200827BA1 /* AppDelegate.swift */,
 				72662D6C1EEADAD200827BA1 /* ViewController.swift */,
 				72662D891EEAF10200827BA1 /* User.swift */,
+				72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */,
+				72662D8B1EEAF1D500827BA1 /* UserInfo.xib */,
 				72662D6E1EEADAD300827BA1 /* Main.storyboard */,
 				72662D711EEADAD300827BA1 /* Assets.xcassets */,
 				72662D731EEADAD300827BA1 /* LaunchScreen.storyboard */,
@@ -138,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72662D8C1EEAF1D500827BA1 /* UserInfo.xib in Resources */,
 				72662D751EEADAD300827BA1 /* LaunchScreen.storyboard in Resources */,
 				72662D721EEADAD300827BA1 /* Assets.xcassets in Resources */,
 				72662D701EEADAD300827BA1 /* Main.storyboard in Resources */,
@@ -154,6 +161,7 @@
 				72662D6D1EEADAD200827BA1 /* ViewController.swift in Sources */,
 				72662D6B1EEADAD200827BA1 /* AppDelegate.swift in Sources */,
 				72662D8A1EEAF10200827BA1 /* User.swift in Sources */,
+				72662D8E1EEAF2DF00827BA1 /* UserInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
