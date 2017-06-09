@@ -82,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Y5-hx-U2L"/>
                     <connections>
+                        <outlet property="mapView" destination="rAi-bB-MsN" id="uiK-bx-rF3"/>
                         <outlet property="tableView" destination="07g-zG-N7S" id="zSQ-LX-XYr"/>
                         <outlet property="userInfoView" destination="tHL-Be-hXW" id="UT0-o6-ybx"/>
                     </connections>

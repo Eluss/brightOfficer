@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userInfoView: UserInfoView!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
         userInfoView.apply(user: user)
+        
+        clearAnnotations()
+        addAnnotationToMapKit(name: user.name, coords: user.location!)
+    }
+    
+    func clearAnnotations() {
+        mapView.removeAnnotations(mapView.annotations)
+    }
+    
+    func addAnnotationToMapKit(name: String, coords: CLLocationCoordinate2D) {        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coords
+        annotation.title = name
+        mapView.addAnnotation(annotation)
+        let region = MKCoordinateRegionMakeWithDistance(coord, 800, 800)
+        mapView.setRegion(region, animated: true)
     }
 
 
