@@ -19,6 +19,7 @@ class User: Mappable {
     var phoneNumber: String = ""
     var weight: Double = 0.0
     var info: String = ""
+    var status: String = ""
     
     init(name: String, picture: String, location: CLLocationCoordinate2D, phoneNumber: String, weight: Double, info: String) {
         self.name = name
@@ -40,6 +41,9 @@ class User: Mappable {
         phoneNumber <- map["phoneNumber"]
         weight <- map["weight"]
         info <- map["info"]
+        let params: [Double] = map.JSON["location"] as! [Double]
+        let coords = CLLocationCoordinate2D(latitude: params[1], longitude: params[0])
+        location = coords
     }
     
 }

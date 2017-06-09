@@ -23,6 +23,7 @@ class Call: Mappable {
         id <- map["id"]
         status <- map["status"]        
         user <- map["user"]
+        user?.status = status
     }
     
     

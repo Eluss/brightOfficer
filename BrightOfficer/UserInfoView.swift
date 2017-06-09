@@ -35,7 +35,7 @@ class UserInfoView: UIView {
         phoneLabel.text = user.phoneNumber
         weightLabel.text = "\(user.weight)kg"
         infoLabel.text = user.info
-        statusLabel.text = "Waiting"
+        statusLabel.text = user.status
     }
     @IBAction func didTapActionButton(_ sender: Any) {
         if let user = user {
