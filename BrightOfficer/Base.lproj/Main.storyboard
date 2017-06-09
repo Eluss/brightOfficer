@@ -30,6 +30,7 @@
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rbV-Px-0ZG" detailTextLabel="G63-5H-wkW" style="IBUITableViewCellStyleSubtitle" id="eyB-d7-b78">
                                         <rect key="frame" x="0.0" y="28" width="340" height="60"/>
