@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         annotation.coordinate = coords
         annotation.title = name
         mapView.addAnnotation(annotation)
-        let region = MKCoordinateRegionMakeWithDistance(coords, 800, 800)
+        let region = MKCoordinateRegionMakeWithDistance(coords, 2000, 2000)
         mapView.setRegion(region, animated: true)
     }
 
