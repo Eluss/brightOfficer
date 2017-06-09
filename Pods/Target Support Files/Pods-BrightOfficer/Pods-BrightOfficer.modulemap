@@ -1,0 +1,6 @@
+framework module Pods_BrightOfficer {
+  umbrella header "Pods-BrightOfficer-umbrella.h"
+
+  export *
+  module * { export * }
+}
