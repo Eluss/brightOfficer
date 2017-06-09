@@ -20,8 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Bright Officer"
-        UITableView.appearance().backgroundColor = UIColor(colorLiteralRed: 50, green: 50, blue: 50, alpha: 1)
+        title = "Bright Officer"        
         usersFetcher.fetchUsers { users in
             self.users = users
             self.tableView.reloadData()
