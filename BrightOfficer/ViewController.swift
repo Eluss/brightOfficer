@@ -28,6 +28,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    @IBAction func refreshData(_ sender: Any) {
+        usersFetcher.fetchUsers { users in
+            self.users = users
+            self.tableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         let user = users[indexPath.row]

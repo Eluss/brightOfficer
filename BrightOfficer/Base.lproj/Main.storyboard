@@ -85,7 +85,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rAi-bB-MsN" secondAttribute="bottom" id="xvI-7G-qzO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Y5-hx-U2L"/>
+                    <navigationItem key="navigationItem" id="7Y5-hx-U2L">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="A1M-WG-FJu" userLabel="Refresh">
+                            <connections>
+                                <action selector="refreshData:" destination="BYZ-38-t0r" id="IIe-rM-aks"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="rAi-bB-MsN" id="uiK-bx-rF3"/>
                         <outlet property="tableView" destination="07g-zG-N7S" id="zSQ-LX-XYr"/>
