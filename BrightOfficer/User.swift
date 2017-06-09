@@ -8,9 +8,11 @@
 
 import Foundation
 import CoreLocation
+import ObjectMapper
 
-class User {
+class User: Mappable {
     
+    var id: String = ""
     var name: String = ""
     var picture: String?
     var location: CLLocationCoordinate2D?
@@ -25,6 +27,19 @@ class User {
         self.phoneNumber = phoneNumber
         self.weight = weight
         self.info = info
+    }
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        name <- map["name"]
+        picture <- map["picture"]
+        phoneNumber <- map["phoneNumber"]
+        weight <- map["weight"]
+        info <- map["info"]
     }
     
 }

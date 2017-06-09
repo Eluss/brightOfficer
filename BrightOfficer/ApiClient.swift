@@ -8,6 +8,8 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
+
 class ApiClient {
     
     let host = "http://35.187.160.105"
@@ -19,10 +21,11 @@ class ApiClient {
         return url + "?access_token=" + accessToken
     }
     
-    func getUsers() {
+    func getCalls(onCallsReceived: @escaping ([Call])->Void) {
         let url = URL(string: host + urlWithAccessToken(url: "/calls"))!
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-            debugPrint(response)
+            let calls = Mapper<Call>().mapArray(JSONArray: response.result.value! as! [[String : Any]])
+            onCallsReceived(calls!)
         }
     }
 

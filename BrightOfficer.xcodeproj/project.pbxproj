@@ -19,6 +19,7 @@
 		72662D901EEAFBAC00827BA1 /* UsersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */; };
 		72662D921EEB0B0600827BA1 /* UserActionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */; };
 		72A46E341EEB0D17007A93BB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A46E331EEB0D17007A93BB /* ApiClient.swift */; };
+		72A46E361EEB1131007A93BB /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A46E351EEB1131007A93BB /* Call.swift */; };
 		DBD1305DB5064C7960854460 /* Pods_BrightOfficer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B63CD48429FE9E413A75B7F /* Pods_BrightOfficer.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFetcher.swift; sourceTree = "<group>"; };
 		72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActionPerformer.swift; sourceTree = "<group>"; };
 		72A46E331EEB0D17007A93BB /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		72A46E351EEB1131007A93BB /* Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		DDC365DD7B16D0B8BBDD7E70 /* Pods-BrightOfficer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOfficer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrightOfficer/Pods-BrightOfficer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				72662D731EEADAD300827BA1 /* LaunchScreen.storyboard */,
 				72662D761EEADAD300827BA1 /* Info.plist */,
 				72A46E331EEB0D17007A93BB /* ApiClient.swift */,
+				72A46E351EEB1131007A93BB /* Call.swift */,
 			);
 			path = BrightOfficer;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A46E341EEB0D17007A93BB /* ApiClient.swift in Sources */,
+				72A46E361EEB1131007A93BB /* Call.swift in Sources */,
 				72662D901EEAFBAC00827BA1 /* UsersFetcher.swift in Sources */,
 				72662D6D1EEADAD200827BA1 /* ViewController.swift in Sources */,
 				72662D6B1EEADAD200827BA1 /* AppDelegate.swift in Sources */,
