@@ -13,7 +13,7 @@ import ObjectMapper
 class ApiClient {
     
     let host = "http://35.187.160.105"
-    let accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5M2E4NGU0NmZkMzdjMDA5YzFmNjZkZiIsImlhdCI6MTQ5NzAwNzQxMn0.5WgPKL7pvksheDrv1r1Dox9to2eLRQtVMdD4YZ6jNRU"
+    let accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5M2FlMTBkMTEwYzk0MDBhNjc3ZjBlZiIsImlhdCI6MTQ5NzAzMTAwMn0.Sn-32cieaiAmVYuJE4R2wflqD53ZlQpg9-zbZGZSBkc"
     
     static let sharedInstance = ApiClient()
     
