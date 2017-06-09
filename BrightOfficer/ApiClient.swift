@@ -21,7 +21,7 @@ class ApiClient {
     
     func getUsers() {
         let url = URL(string: host + urlWithAccessToken(url: "/calls"))!
-        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { response in
+        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { response in
             debugPrint(response)
         }
     }
