@@ -15,11 +15,14 @@ class ApiClient {
     
     static let sharedInstance = ApiClient()
     
+    func urlWithAccessToken(url: String) -> String {
+        return url + "?access_token=" + accessToken
+    }
+    
     func getUsers() {
-        let url = URL(string: host + "/calls?access_token=" + accessToken)!
+        let url = URL(string: host + urlWithAccessToken(url: "/calls"))!
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).response { response in
             debugPrint(response)
-//            print(response.response?.statusCode)
         }
     }
 
