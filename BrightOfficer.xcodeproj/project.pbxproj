@@ -18,9 +18,12 @@
 		72662D8E1EEAF2DF00827BA1 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */; };
 		72662D901EEAFBAC00827BA1 /* UsersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */; };
 		72662D921EEB0B0600827BA1 /* UserActionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */; };
+		DBD1305DB5064C7960854460 /* Pods_BrightOfficer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B63CD48429FE9E413A75B7F /* Pods_BrightOfficer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370B1E014C42C913FB84FA6E /* Pods-BrightOfficer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOfficer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrightOfficer/Pods-BrightOfficer.debug.xcconfig"; sourceTree = "<group>"; };
+		6B63CD48429FE9E413A75B7F /* Pods_BrightOfficer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrightOfficer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72662D671EEADAD200827BA1 /* BrightOfficer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrightOfficer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72662D6A1EEADAD200827BA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72662D6C1EEADAD200827BA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		72662D8D1EEAF2DF00827BA1 /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		72662D8F1EEAFBAC00827BA1 /* UsersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersFetcher.swift; sourceTree = "<group>"; };
 		72662D911EEB0B0600827BA1 /* UserActionPerformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserActionPerformer.swift; sourceTree = "<group>"; };
+		DDC365DD7B16D0B8BBDD7E70 /* Pods-BrightOfficer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrightOfficer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrightOfficer/Pods-BrightOfficer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72662D861EEAECDD00827BA1 /* MapKit.framework in Frameworks */,
+				DBD1305DB5064C7960854460 /* Pods_BrightOfficer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,7 @@
 				72662D691EEADAD200827BA1 /* BrightOfficer */,
 				72662D681EEADAD200827BA1 /* Products */,
 				72662D841EEAECDD00827BA1 /* Frameworks */,
+				E69FF2EC3A9ADC638B1DF841 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				72662D851EEAECDD00827BA1 /* MapKit.framework */,
+				6B63CD48429FE9E413A75B7F /* Pods_BrightOfficer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E69FF2EC3A9ADC638B1DF841 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				370B1E014C42C913FB84FA6E /* Pods-BrightOfficer.debug.xcconfig */,
+				DDC365DD7B16D0B8BBDD7E70 /* Pods-BrightOfficer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72662D791EEADAD300827BA1 /* Build configuration list for PBXNativeTarget "BrightOfficer" */;
 			buildPhases = (
+				BEE1CE6C1FBC6E2EB139CE7A /* [CP] Check Pods Manifest.lock */,
 				72662D631EEADAD200827BA1 /* Sources */,
 				72662D641EEADAD200827BA1 /* Frameworks */,
 				72662D651EEADAD200827BA1 /* Resources */,
+				C4AF5409741B8A928445F97D /* [CP] Embed Pods Frameworks */,
+				C68AF216746DEAEAB0932595 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +177,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BEE1CE6C1FBC6E2EB139CE7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4AF5409741B8A928445F97D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrightOfficer/Pods-BrightOfficer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68AF216746DEAEAB0932595 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrightOfficer/Pods-BrightOfficer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72662D631EEADAD200827BA1 /* Sources */ = {
@@ -290,6 +357,7 @@
 		};
 		72662D7A1EEADAD300827BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 370B1E014C42C913FB84FA6E /* Pods-BrightOfficer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BrightOfficer/Info.plist;
@@ -303,6 +371,7 @@
 		};
 		72662D7B1EEADAD300827BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC365DD7B16D0B8BBDD7E70 /* Pods-BrightOfficer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BrightOfficer/Info.plist;
