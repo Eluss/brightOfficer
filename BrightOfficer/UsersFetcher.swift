@@ -12,6 +12,7 @@ import CoreLocation
 class UsersFetcher {
     
     func fetchUsers(onUsersFetched: (([User]) -> Void)) {
+        ApiClient.sharedInstance.getUsers()
         onUsersFetched(fakeUsers())
     }
     
