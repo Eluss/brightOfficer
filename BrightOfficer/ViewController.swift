@@ -55,8 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         let user = users[indexPath.row]
-        cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text = user.phoneNumber
+        cell.textLabel?.text = "Imię: " + user.name
+        cell.detailTextLabel?.text = "Numer telefonu: " + user.phoneNumber
         cell.selectionStyle = .gray
         return cell
     }
