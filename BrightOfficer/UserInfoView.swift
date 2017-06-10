@@ -21,6 +21,8 @@ class UserInfoView: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nextStepButton: UIButton!
     
+    var refreshed: (()->())?
+    
     private var userActionPerformer = UserActionPerformer()
     var user: User?
     
@@ -82,9 +84,10 @@ class UserInfoView: UIView {
     }
     @IBAction func didTapActionButton(_ sender: Any) {
         if let user = user {
-            userActionPerformer.changeStatusFor(user: user)
-            
-            ApiClient.sharedInstance.nextStep(id: user.callId)
+            userActionPerformer.changeStatusFor(user: user)            
+            ApiClient.sharedInstance.nextStep(id: user.callId, callback: { _ in
+                self.refreshed?()
+            })
         }
     }
     

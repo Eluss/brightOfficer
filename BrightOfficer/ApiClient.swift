@@ -29,14 +29,14 @@ class ApiClient {
         }
     }
     
-    func nextStep(id: String) {
+    func nextStep(id: String, callback: @escaping ()->()) {
         let parameters = [
             "access_token": accessToken
             ] as [String : Any]
         
         let url = URL(string: host + urlWithAccessToken(url: "/calls/" + id + "/nextStep"))!
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).response { (response) in
-            
+            callback()
         }
     }
 }

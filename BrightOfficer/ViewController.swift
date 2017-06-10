@@ -18,9 +18,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var userInfoView: UserInfoView!
     @IBOutlet weak var mapView: MKMapView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        userInfoView.refreshed = { _ in
+            self.usersFetcher.fetchUsers { users in
+                self.users = users
+                self.tableView.reloadData()
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.userInfoView.apply(user: users.first!)
+                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Bright Officer"
+        
+        userInfoView.refreshed = { _ in
+            self.usersFetcher.fetchUsers { users in
+                self.users = users
+                self.tableView.reloadData()
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.userInfoView.apply(user: users.first!)
+                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+            }
+        }
         
         usersFetcher.fetchUsers { users in
             self.users = users
