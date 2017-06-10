@@ -20,14 +20,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        userInfoView.refreshed = { _ in
-            self.usersFetcher.fetchUsers { users in
-                self.users = users
-                self.tableView.reloadData()
-                let indexPath = IndexPath(row: 0, section: 0)
-                self.userInfoView.apply(user: users.first!)
-                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
-            }
+            refresh()
+    }
+    
+    func refresh() {
+        self.usersFetcher.fetchUsers { users in
+            self.users = users
+            self.tableView.reloadData()
+            let indexPath = IndexPath(row: 0, section: 0)
+            self.userInfoView.apply(user: users.first!)
+            self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+            self.clearAnnotations()
+            self.addAnnotationToMapKit(name: users.first!.name, coords: users.first!.location!)
         }
     }
     
@@ -35,27 +39,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         title = "Bright Officer"
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(rawValue: "refresh"), object: nil)        
+        
         userInfoView.refreshed = { _ in
-            self.usersFetcher.fetchUsers { users in
-                self.users = users
-                self.tableView.reloadData()
-                let indexPath = IndexPath(row: 0, section: 0)
-                self.userInfoView.apply(user: users.first!)
-                self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
-            }
+            self.refresh()
         }
         
-        usersFetcher.fetchUsers { users in
-            self.users = users
-            self.tableView.reloadData()
-        }
+        refresh()
     }
     
     @IBAction func refreshData(_ sender: Any) {
-        usersFetcher.fetchUsers { users in
-            self.users = users
-            self.tableView.reloadData()
-        }
+        refresh()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForPushNotifications()
         return true
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+    }
 
     func registerForPushNotifications() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
