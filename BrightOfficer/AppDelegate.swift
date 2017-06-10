@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+    }
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
     }
