@@ -28,5 +28,15 @@ class ApiClient {
             onCallsReceived(calls!)
         }
     }
-
+    
+    func nextStep(id: String) {
+        let parameters = [
+            "access_token": accessToken
+            ] as [String : Any]
+        
+        let url = URL(string: host + urlWithAccessToken(url: "/calls/" + id + "/nextStep"))!
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).response { (response) in
+            
+        }
+    }
 }

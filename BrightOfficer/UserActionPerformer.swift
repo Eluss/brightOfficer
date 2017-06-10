@@ -11,6 +11,7 @@ import Foundation
 class UserActionPerformer {
     
     func changeStatusFor(user: User) {
+        
         print("*UserActionPerformer* changing status for user \(user.name)")
     }
     

@@ -12,6 +12,7 @@ import ObjectMapper
 
 class User: Mappable {
     
+    var callId: String = ""
     var id: String = ""
     var name: String = ""
     var picture: String = ""
